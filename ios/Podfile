@@ -1,5 +1,3 @@
-# use Firebase analytics without ad ids to avoid App Tracking Transparency requirement
-# $RNFirebaseAnalyticsWithoutAdIdSupport = true
 
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
@@ -46,14 +44,6 @@ target 'crash' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
-
-  # pod 'Firebase', :modular_headers => true
-  # pod 'FirebaseCore', :modular_headers => true
-  # pod 'GoogleUtilities', :modular_headers => true
-
-  # permissions_path = '../node_modules/react-native-permissions/ios'
-  # pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
-  # pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
 
   post_install do |installer|
     react_native_post_install(
